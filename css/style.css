@@ -14,8 +14,26 @@ body {
     display: grid;
 }
 
+@media (max-width: 900px) {
+    body {
+        grid: auto auto /1fr 670px 1fr;
+    }
+}
+
+@media (max-width: 670px) {
+    body {
+        grid: auto auto auto /1fr;
+    }
+}
+
 header {
     grid-area: 1/2/2/4;
+}
+
+@media (max-width: 670px) {
+    header {
+        grid-area: 1/1/2/2;
+    }
 }
 
 main {
@@ -24,13 +42,34 @@ main {
     grid: auto / 300px 600px;
 }
 
+@media (max-width: 670px) {
+    .main {
+        grid-area: 2/1/3/2;
+        grid: auto / auto;
+        padding: 10px;
+    }
+}
+
 .column-1 {
     grid-area: 1/1/2/2;
+}
+
+@media (max-width: 670px) {
+    .column-1 {
+        grid-area: 2/1/3/2;
+    }
 }
 
 .column-2 {
     grid-area: 1/2/2/3;
     margin-left: 30px;
+}
+
+@media (max-width: 670px) {
+    .column-2 {
+        grid-area: 3/1/4/2;
+        margin-left: 0;
+    }
 }
 
 main section {
@@ -116,9 +155,22 @@ main section > .detail {
     align-items: center;
     grid-gap: 10px;
 }
+
+@media (max-width: 670px) {
+    .layout-1 .detail > li {
+        grid: auto auto auto/ auto auto;
+    }
+}
+
 .layout-1 .detail .timeline {
     grid-area: 1/1/2/2;
 
+}
+
+@media (max-width: 670px) {
+    .layout-1 .detail .timeline {
+        grid-area: 1/1/2/2;
+    }
 }
 
 .layout-1 .detail h3 {
@@ -126,13 +178,33 @@ main section > .detail {
     margin: 0;
 }
 
+@media (max-width: 670px) {
+    .layout-1 .detail h3 {
+        grid-area: 2/1/3/2;
+        margin: 0;
+    }
+}
+
 .layout-1 .detail .subtitle {
     grid-area: 1/3/2/4;
+}
+
+@media (max-width: 670px) {
+    .layout-1 .detail .subtitle {
+        grid-area: 1/2/2/3;
+        justify-self: end;
+    }
 }
 
 .layout-1 .detail .content {
     grid-area: 2/2/3/4;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 670px) {
+    .layout-1 .detail .content {
+        grid-area: 3/1/4/3;
+    }
 }
 
